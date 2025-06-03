@@ -1,0 +1,1247 @@
+Directory structure:
+└── with-next-siwe-next-auth/
+    ├── README.md
+    ├── CHANGELOG.md
+    ├── next-env.d.ts
+    ├── next.config.js
+    ├── .env.local.example
+    ├── .gitignore
+    ├── src/
+    │   ├── wagmi.ts
+    │   ├── pages/
+    │   │   ├── _app.tsx
+    │   │   ├── index.tsx
+    │   │   └── api/
+    │   │       └── auth/
+    │   │           └── [...nextauth].ts
+    │   └── styles/
+    │       └── global.css
+    ├── types/
+    │   └── next-auth.d.ts
+    ├── .codesandbox/
+    └── .devcontainer/
+
+================================================
+FILE: examples/with-next-siwe-next-auth/README.md
+================================================
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+
+## Getting Started
+
+First, run the development server:
+
+```bash
+npm run dev
+# or
+yarn dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+
+## Learn More
+
+To learn more about Next.js, take a look at the following resources:
+
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+
+
+================================================
+FILE: examples/with-next-siwe-next-auth/CHANGELOG.md
+================================================
+# with-next-siwe-next-auth
+
+## 0.0.85
+
+### Patch Changes
+
+- 5e16367: Upgraded `wagmi` to `^2.15.2` and `viem` to `2.29.2`
+- Updated dependencies [3d73508]
+- Updated dependencies [c5a9cc1]
+- Updated dependencies [8515fd3]
+- Updated dependencies [5b54649]
+- Updated dependencies [03ae0d0]
+  - @rainbow-me/rainbowkit@2.2.5
+  - @rainbow-me/rainbowkit-siwe-next-auth@0.5.0
+
+## 0.0.84
+
+### Patch Changes
+
+- 182440a: Upgraded `wagmi` to `^2.14.11` and `viem` to `2.23.3`
+- 3f82fe8: Adopted Biome formatting, modernized tsconfig
+- Updated dependencies [f89eb92]
+- Updated dependencies [a765cfc]
+- Updated dependencies [9c9c491]
+- Updated dependencies [f5a7cec]
+- Updated dependencies [e4547b8]
+  - @rainbow-me/rainbowkit@2.2.4
+  - @rainbow-me/rainbowkit-siwe-next-auth@0.5.0
+
+## 0.0.83
+
+### Patch Changes
+
+- Updated dependencies [b5a7878]
+  - @rainbow-me/rainbowkit@2.2.3
+  - @rainbow-me/rainbowkit-siwe-next-auth@0.5.0
+
+## 0.0.82
+
+### Patch Changes
+
+- Updated dependencies [f533ac2]
+  - @rainbow-me/rainbowkit@2.2.2
+  - @rainbow-me/rainbowkit-siwe-next-auth@0.5.0
+
+## 0.0.81
+
+### Patch Changes
+
+- Updated dependencies [3469982]
+- Updated dependencies [0c6af55]
+- Updated dependencies [5b8e146]
+- Updated dependencies [9dd23d9]
+- Updated dependencies [7fceab8]
+  - @rainbow-me/rainbowkit@2.2.1
+  - @rainbow-me/rainbowkit-siwe-next-auth@0.5.0
+
+## 0.0.80
+
+### Patch Changes
+
+- dc31926: Upgraded `wagmi` to `^2.12.17`
+- Updated dependencies [f02bced]
+- Updated dependencies [f02bced]
+  - @rainbow-me/rainbowkit@2.2.0
+  - @rainbow-me/rainbowkit-siwe-next-auth@0.5.0
+
+## 0.0.79
+
+### Patch Changes
+
+- Updated dependencies [f93cd0e]
+- Updated dependencies [4014d80]
+- Updated dependencies [6393498]
+  - @rainbow-me/rainbowkit@2.1.7
+  - @rainbow-me/rainbowkit-siwe-next-auth@0.4.1
+
+## 0.0.78
+
+### Patch Changes
+
+- 17c22b2: Upgraded `wagmi` to `^2.12.9`
+- Updated dependencies [63d8386]
+- Updated dependencies [8d9a4e6]
+- Updated dependencies [d46637a]
+  - @rainbow-me/rainbowkit@2.1.6
+  - @rainbow-me/rainbowkit-siwe-next-auth@0.4.1
+
+## 0.0.77
+
+### Patch Changes
+
+- Updated dependencies [c08f620]
+- Updated dependencies [675f9dd]
+- Updated dependencies [f65b5c4]
+- Updated dependencies [9c36bfd]
+  - @rainbow-me/rainbowkit@2.1.5
+  - @rainbow-me/rainbowkit-siwe-next-auth@0.4.1
+
+## 0.0.76
+
+### Patch Changes
+
+- 4cff94d: - updated `wagmi` to `^2.12.0`
+  - updated `viem` to `2.17.0`
+  - update `@tanstack/react-query` to `^5.51.11`
+- Updated dependencies [b530c80]
+- Updated dependencies [7f6e36e]
+- Updated dependencies [2eeb7b9]
+- Updated dependencies [72fe07d]
+- Updated dependencies [d02d73f]
+  - @rainbow-me/rainbowkit@2.1.4
+  - @rainbow-me/rainbowkit-siwe-next-auth@0.4.1
+
+## 0.0.75
+
+### Patch Changes
+
+- Updated dependencies [23e33b9]
+- Updated dependencies [d81935c]
+- Updated dependencies [7b00be5]
+- Updated dependencies [001a0a9]
+  - @rainbow-me/rainbowkit@2.1.3
+  - @rainbow-me/rainbowkit-siwe-next-auth@0.4.1
+
+## 0.0.74
+
+### Patch Changes
+
+- Updated dependencies [2180ddd]
+- Updated dependencies [fea278a]
+  - @rainbow-me/rainbowkit@2.1.2
+  - @rainbow-me/rainbowkit-siwe-next-auth@0.4.1
+
+## 0.0.73
+
+### Patch Changes
+
+- Updated dependencies [725a376]
+- Updated dependencies [9be5452]
+  - @rainbow-me/rainbowkit@2.1.1
+  - @rainbow-me/rainbowkit-siwe-next-auth@0.4.1
+
+## 0.0.72
+
+### Patch Changes
+
+- Updated dependencies [90d6931]
+- Updated dependencies [82153ed]
+  - @rainbow-me/rainbowkit@2.1.0
+  - @rainbow-me/rainbowkit-siwe-next-auth@0.4.1
+
+## 0.0.71
+
+### Patch Changes
+
+- Updated dependencies [8841891]
+  - @rainbow-me/rainbowkit@2.0.8
+  - @rainbow-me/rainbowkit-siwe-next-auth@0.4.0
+
+## 0.0.70
+
+### Patch Changes
+
+- Updated dependencies [af4ea4e]
+- Updated dependencies [f0b3b25]
+  - @rainbow-me/rainbowkit@2.0.7
+  - @rainbow-me/rainbowkit-siwe-next-auth@0.4.0
+
+## 0.0.69
+
+### Patch Changes
+
+- Updated dependencies [7ab6e50]
+- Updated dependencies [515498f]
+  - @rainbow-me/rainbowkit@2.0.6
+  - @rainbow-me/rainbowkit-siwe-next-auth@0.4.0
+
+## 0.0.68
+
+### Patch Changes
+
+- Updated dependencies [81ba812]
+- Updated dependencies [fc4d7e1]
+- Updated dependencies [1a0f209]
+- Updated dependencies [b11118f]
+- Updated dependencies [4dd1e45]
+- Updated dependencies [ec41346]
+  - @rainbow-me/rainbowkit@2.0.5
+  - @rainbow-me/rainbowkit-siwe-next-auth@0.4.0
+
+## 0.0.67
+
+### Patch Changes
+
+- Updated dependencies [77dcec3]
+- Updated dependencies [6c240ba]
+- Updated dependencies [34419b5]
+- Updated dependencies [5c60239]
+  - @rainbow-me/rainbowkit@2.0.4
+  - @rainbow-me/rainbowkit-siwe-next-auth@0.4.0
+
+## 0.0.66
+
+### Patch Changes
+
+- c837995: Updated the following packages:
+  - wagmi to `^2.5.11`
+  - viem to `^2.8.12`
+  - @tanstack/react-query to `^5.28.4`
+  - typescript to `5.4.2`
+- Updated dependencies [b80e8fa]
+- Updated dependencies [985b80b]
+- Updated dependencies [b25db9a]
+  - @rainbow-me/rainbowkit@2.0.3
+  - @rainbow-me/rainbowkit-siwe-next-auth@0.4.0
+
+## 0.0.65
+
+### Patch Changes
+
+- 6982833: Updated the following packages:
+
+  - `next` to `^14.1.3`
+  - `eslint-config-next` to `^14.1.3`
+  - `@types/react` to `^18.2.64`
+  - `@types/react` to `^18.2.64`
+
+- Updated dependencies [524d7a0]
+- Updated dependencies [2f637e4]
+- Updated dependencies [c021746]
+- Updated dependencies [df572f1]
+  - @rainbow-me/rainbowkit@2.0.2
+  - @rainbow-me/rainbowkit-siwe-next-auth@0.4.0
+
+## 0.0.64
+
+### Patch Changes
+
+- d623428: Updated the following packages:
+  - wagmi to `^2.5.7`
+  - viem to `^2.7.12`
+  - @tanstack/react-query to `^5.22.2`
+- Updated dependencies [5149dbd]
+- Updated dependencies [1e7d3f4]
+- Updated dependencies [c16541a]
+- Updated dependencies [dbca966]
+- Updated dependencies [f69c0e1]
+- Updated dependencies [bb56562]
+- Updated dependencies [1a08977]
+  - @rainbow-me/rainbowkit@2.0.1
+  - @rainbow-me/rainbowkit-siwe-next-auth@0.4.0
+
+## 0.0.63
+
+### Patch Changes
+
+- Updated dependencies [aa0269e]
+- Updated dependencies [aa0269e]
+  - @rainbow-me/rainbowkit-siwe-next-auth@0.4.0
+  - @rainbow-me/rainbowkit@2.0.0
+
+## 0.0.62
+
+### Patch Changes
+
+- Updated dependencies [33a8266]
+  - @rainbow-me/rainbowkit@1.3.6
+  - @rainbow-me/rainbowkit-siwe-next-auth@0.3.4
+
+## 0.0.61
+
+### Patch Changes
+
+- Updated dependencies [2b0c7b3]
+  - @rainbow-me/rainbowkit@1.3.5
+  - @rainbow-me/rainbowkit-siwe-next-auth@0.3.4
+
+## 0.0.60
+
+### Patch Changes
+
+- Updated dependencies [c0a644a]
+- Updated dependencies [41616b9]
+- Updated dependencies [cf4955f]
+- Updated dependencies [e5f5f03]
+- Updated dependencies [c0bd68e]
+- Updated dependencies [a79609b]
+  - @rainbow-me/rainbowkit@1.3.4
+  - @rainbow-me/rainbowkit-siwe-next-auth@0.3.4
+
+## 0.0.59
+
+### Patch Changes
+
+- Updated dependencies [24b5a88]
+- Updated dependencies [7565fb2]
+- Updated dependencies [5a184e9]
+  - @rainbow-me/rainbowkit@1.3.3
+  - @rainbow-me/rainbowkit-siwe-next-auth@0.3.4
+
+## 0.0.58
+
+### Patch Changes
+
+- Updated dependencies [7ba94f48]
+  - @rainbow-me/rainbowkit@1.3.2
+  - @rainbow-me/rainbowkit-siwe-next-auth@0.3.4
+
+## 0.0.57
+
+### Patch Changes
+
+- Updated dependencies [3feab0e6]
+- Updated dependencies [c9a8e469]
+- Updated dependencies [dba51779]
+  - @rainbow-me/rainbowkit@1.3.1
+  - @rainbow-me/rainbowkit-siwe-next-auth@0.3.4
+
+## 0.0.56
+
+### Patch Changes
+
+- Updated dependencies [9ce75a65]
+  - @rainbow-me/rainbowkit@1.3.0
+  - @rainbow-me/rainbowkit-siwe-next-auth@0.3.4
+
+## 0.0.55
+
+### Patch Changes
+
+- Updated dependencies [2f56ab23]
+- Updated dependencies [9dfe0531]
+  - @rainbow-me/rainbowkit-siwe-next-auth@0.3.3
+
+## 0.0.54
+
+### Patch Changes
+
+- Updated dependencies [74ead9df]
+- Updated dependencies [94dce820]
+- Updated dependencies [39d81e93]
+  - @rainbow-me/rainbowkit@1.2.1
+  - @rainbow-me/rainbowkit-siwe-next-auth@0.3.2
+
+## 0.0.53
+
+### Patch Changes
+
+- Updated dependencies [ef64a229]
+  - @rainbow-me/rainbowkit@1.2.0
+  - @rainbow-me/rainbowkit-siwe-next-auth@0.3.2
+
+## 0.0.52
+
+### Patch Changes
+
+- Updated dependencies [9f68c300]
+- Updated dependencies [3f595c12]
+- Updated dependencies [e2075b31]
+  - @rainbow-me/rainbowkit@1.1.4
+  - @rainbow-me/rainbowkit-siwe-next-auth@0.3.1
+
+## 0.0.51
+
+### Patch Changes
+
+- Updated dependencies [02e796c0]
+- Updated dependencies [efb8566e]
+- Updated dependencies [4b7a44c8]
+- Updated dependencies [2c8abbb2]
+- Updated dependencies [e41103fb]
+- Updated dependencies [b0022aea]
+  - @rainbow-me/rainbowkit@1.1.3
+  - @rainbow-me/rainbowkit-siwe-next-auth@0.3.1
+
+## 0.0.50
+
+### Patch Changes
+
+- Updated dependencies [6cbd9a57]
+- Updated dependencies [7d978605]
+- Updated dependencies [b2b69dcd]
+  - @rainbow-me/rainbowkit@1.1.2
+  - @rainbow-me/rainbowkit-siwe-next-auth@0.3.1
+
+## 0.0.49
+
+### Patch Changes
+
+- Updated dependencies [b60e335c]
+  - @rainbow-me/rainbowkit@1.1.1
+  - @rainbow-me/rainbowkit-siwe-next-auth@0.3.1
+
+## 0.0.48
+
+### Patch Changes
+
+- Updated dependencies [b37f5d68]
+  - @rainbow-me/rainbowkit@1.1.0
+  - @rainbow-me/rainbowkit-siwe-next-auth@0.3.2
+
+## 0.0.47
+
+### Patch Changes
+
+- Updated dependencies [5b8d8219]
+- Updated dependencies [fb9405a4]
+- Updated dependencies [7643e706]
+- Updated dependencies [252f02e8]
+  - @rainbow-me/rainbowkit@1.0.12
+  - @rainbow-me/rainbowkit-siwe-next-auth@0.3.0
+
+## 0.0.46
+
+### Patch Changes
+
+- Updated dependencies [118dfe11]
+  - @rainbow-me/rainbowkit@1.0.11
+  - @rainbow-me/rainbowkit-siwe-next-auth@0.3.0
+
+## 0.0.45
+
+### Patch Changes
+
+- Updated dependencies [a129cb04]
+  - @rainbow-me/rainbowkit@1.0.10
+  - @rainbow-me/rainbowkit-siwe-next-auth@0.3.0
+
+## 0.0.44
+
+### Patch Changes
+
+- Updated dependencies [42a0c3e5]
+- Updated dependencies [67933ed5]
+- Updated dependencies [e7ae2571]
+- Updated dependencies [c434ca7a]
+- Updated dependencies [ad1f860e]
+- Updated dependencies [60968a5f]
+- Updated dependencies [7b31af24]
+  - @rainbow-me/rainbowkit@1.0.9
+  - @rainbow-me/rainbowkit-siwe-next-auth@0.3.0
+
+## 0.0.43
+
+### Patch Changes
+
+- Updated dependencies [eb319f3]
+- Updated dependencies [86be3f0]
+  - @rainbow-me/rainbowkit@1.0.8
+  - @rainbow-me/rainbowkit-siwe-next-auth@0.3.0
+
+## 0.0.42
+
+### Patch Changes
+
+- Updated dependencies [f1e98e84]
+- Updated dependencies [d303a3b9]
+  - @rainbow-me/rainbowkit@1.0.7
+  - @rainbow-me/rainbowkit-siwe-next-auth@0.2.0
+
+## 0.0.41
+
+### Patch Changes
+
+- Updated dependencies [dc3cd10b]
+- Updated dependencies [c251d55d]
+- Updated dependencies [d5b3bd19]
+- Updated dependencies [66e84239]
+- Updated dependencies [1b4f142e]
+- Updated dependencies [e089ab98]
+  - @rainbow-me/rainbowkit@1.0.6
+  - @rainbow-me/rainbowkit-siwe-next-auth@0.2.0
+
+## 0.0.40
+
+### Patch Changes
+
+- Updated dependencies [08e3f4c]
+- Updated dependencies [cb3614e]
+- Updated dependencies [53d96bc]
+- Updated dependencies [bfab830]
+  - @rainbow-me/rainbowkit@1.0.5
+  - @rainbow-me/rainbowkit-siwe-next-auth@0.2.0
+
+## 0.0.39
+
+### Patch Changes
+
+- Updated dependencies [6d361b4]
+  - @rainbow-me/rainbowkit@1.0.4
+  - @rainbow-me/rainbowkit-siwe-next-auth@0.2.0
+
+## 0.0.38
+
+### Patch Changes
+
+- Updated dependencies [d00c777]
+  - @rainbow-me/rainbowkit@1.0.3
+  - @rainbow-me/rainbowkit-siwe-next-auth@0.2.0
+
+## 0.0.37
+
+### Patch Changes
+
+- Updated dependencies [e2b1072]
+- Updated dependencies [e2b1072]
+  - @rainbow-me/rainbowkit@1.0.2
+
+## 0.0.36
+
+### Patch Changes
+
+- Updated dependencies [9432a2f]
+- Updated dependencies [b2c66ff]
+- Updated dependencies [bcb3d18]
+  - @rainbow-me/rainbowkit@1.0.1
+  - @rainbow-me/rainbowkit-siwe-next-auth@0.2.0
+
+## 0.0.35
+
+### Patch Changes
+
+- 371c988: Adopted `fs`, `net`, and `tls` polyfills for better `wagmi@1` and `viem` Webpack bundler support.
+
+  These modules are required by WalletConnect packages upstream, and were previously polyfilled by `ethers`. Reference the discussion [here](https://github.com/wagmi-dev/wagmi/issues/2300#issuecomment-1541425648).
+
+## 0.0.34
+
+### Patch Changes
+
+- Updated dependencies [93b58d0]
+- Updated dependencies [93b58d0]
+  - @rainbow-me/rainbowkit@1.0.0
+  - @rainbow-me/rainbowkit-siwe-next-auth@0.2.0
+
+## 0.0.33
+
+### Patch Changes
+
+- Updated dependencies [865175f]
+  - @rainbow-me/rainbowkit@0.12.14
+  - @rainbow-me/rainbowkit-siwe-next-auth@0.1.10
+
+## 0.0.32
+
+### Patch Changes
+
+- Updated dependencies [0f8e87e]
+- Updated dependencies [6eab54d]
+  - @rainbow-me/rainbowkit@0.12.13
+  - @rainbow-me/rainbowkit-siwe-next-auth@0.1.9
+
+## 0.0.31
+
+### Patch Changes
+
+- Updated dependencies [ab051b9]
+  - @rainbow-me/rainbowkit@0.12.12
+  - @rainbow-me/rainbowkit-siwe-next-auth@0.1.9
+
+## 0.0.30
+
+### Patch Changes
+
+- Updated dependencies [0469e00]
+  - @rainbow-me/rainbowkit@0.12.11
+  - @rainbow-me/rainbowkit-siwe-next-auth@0.1.9
+
+## 0.0.29
+
+### Patch Changes
+
+- Updated dependencies [ecaa85f]
+  - @rainbow-me/rainbowkit@0.12.10
+  - @rainbow-me/rainbowkit-siwe-next-auth@0.1.9
+
+## 0.0.28
+
+### Patch Changes
+
+- Updated dependencies [361bb39]
+- Updated dependencies [82376f0]
+- Updated dependencies [7c9e580]
+- Updated dependencies [0127559]
+  - @rainbow-me/rainbowkit@0.12.9
+  - @rainbow-me/rainbowkit-siwe-next-auth@0.1.9
+
+## 0.0.27
+
+### Patch Changes
+
+- Updated dependencies [aef9643]
+- Updated dependencies [532b117]
+  - @rainbow-me/rainbowkit@0.12.8
+  - @rainbow-me/rainbowkit-siwe-next-auth@0.1.9
+
+## 0.0.26
+
+### Patch Changes
+
+- Updated dependencies [4ef5c51]
+  - @rainbow-me/rainbowkit@0.12.7
+
+## 0.0.25
+
+### Patch Changes
+
+- Updated dependencies [d35809e]
+  - @rainbow-me/rainbowkit@0.12.6
+
+## 0.0.24
+
+### Patch Changes
+
+- Updated dependencies [2b4ede4]
+- Updated dependencies [6a01368]
+- Updated dependencies [936b523]
+- Updated dependencies [7f669bd]
+  - @rainbow-me/rainbowkit@0.12.5
+
+## 0.0.23
+
+### Patch Changes
+
+- Updated dependencies [9b93f56]
+  - @rainbow-me/rainbowkit@0.12.4
+
+## 0.0.22
+
+### Patch Changes
+
+- Updated dependencies [e7f1bec]
+- Updated dependencies [fe4f356]
+  - @rainbow-me/rainbowkit@0.12.3
+
+## 0.0.21
+
+### Patch Changes
+
+- Updated dependencies [2a1d230]
+- Updated dependencies [429a3c7]
+  - @rainbow-me/rainbowkit@0.12.2
+
+## 0.0.20
+
+### Patch Changes
+
+- Updated dependencies [3399df5]
+- Updated dependencies [8f01a12]
+  - @rainbow-me/rainbowkit@0.12.1
+
+## 0.0.19
+
+### Patch Changes
+
+- Updated dependencies [9838acf]
+  - @rainbow-me/rainbowkit@0.12.0
+
+## 0.0.18
+
+### Patch Changes
+
+- Updated dependencies [924ae82]
+- Updated dependencies [5e233ea]
+  - @rainbow-me/rainbowkit@0.11.1
+
+## 0.0.17
+
+### Patch Changes
+
+- Updated dependencies [1876ba0]
+  - @rainbow-me/rainbowkit@0.11.0
+  - @rainbow-me/rainbowkit-siwe-next-auth@0.1.8
+
+## 0.0.16
+
+### Patch Changes
+
+- Updated dependencies [355402b]
+  - @rainbow-me/rainbowkit@0.10.0
+  - @rainbow-me/rainbowkit-siwe-next-auth@0.1.7
+
+## 0.0.15
+
+### Patch Changes
+
+- Updated dependencies [49f0ec9]
+  - @rainbow-me/rainbowkit@0.9.0
+  - @rainbow-me/rainbowkit-siwe-next-auth@0.1.6
+
+## 0.0.14
+
+### Patch Changes
+
+- Updated dependencies [a1d6776]
+  - @rainbow-me/rainbowkit@0.8.1
+  - @rainbow-me/rainbowkit-siwe-next-auth@0.1.5
+
+## 0.0.13
+
+### Patch Changes
+
+- Updated dependencies [6b37050]
+- Updated dependencies [6b37050]
+  - @rainbow-me/rainbowkit-siwe-next-auth@0.1.5
+  - @rainbow-me/rainbowkit@0.8.0
+
+## 0.0.12
+
+### Patch Changes
+
+- Updated dependencies [e36da59]
+- Updated dependencies [0ff4210]
+  - @rainbow-me/rainbowkit@0.7.4
+  - @rainbow-me/rainbowkit-siwe-next-auth@0.1.4
+
+## 0.0.11
+
+### Patch Changes
+
+- Updated dependencies [5a65178]
+  - @rainbow-me/rainbowkit@0.7.3
+  - @rainbow-me/rainbowkit-siwe-next-auth@0.1.4
+
+## 0.0.10
+
+### Patch Changes
+
+- Updated dependencies [1de8203]
+  - @rainbow-me/rainbowkit@0.7.2
+  - @rainbow-me/rainbowkit-siwe-next-auth@0.1.4
+
+## 0.0.9
+
+### Patch Changes
+
+- Updated dependencies [6b6a73b]
+- Updated dependencies [5ddc813]
+  - @rainbow-me/rainbowkit@0.7.1
+  - @rainbow-me/rainbowkit-siwe-next-auth@0.1.4
+
+## 0.0.8
+
+### Patch Changes
+
+- Updated dependencies [2e6bb8f]
+- Updated dependencies [2e6bb8f]
+- Updated dependencies [2e6bb8f]
+  - @rainbow-me/rainbowkit@0.7.0
+  - @rainbow-me/rainbowkit-siwe-next-auth@0.1.4
+
+## 0.0.7
+
+### Patch Changes
+
+- Updated dependencies [ecd7209]
+- Updated dependencies [248a1cb]
+  - @rainbow-me/rainbowkit@0.6.2
+  - @rainbow-me/rainbowkit-siwe-next-auth@0.1.3
+
+## 0.0.6
+
+### Patch Changes
+
+- Updated dependencies [85eb3bd]
+- Updated dependencies [fbf9d82]
+  - @rainbow-me/rainbowkit@0.6.1
+  - @rainbow-me/rainbowkit-siwe-next-auth@0.1.3
+
+## 0.0.5
+
+### Patch Changes
+
+- Updated dependencies [c944ddc]
+- Updated dependencies [c944ddc]
+- Updated dependencies [c944ddc]
+- Updated dependencies [62fd332]
+- Updated dependencies [c944ddc]
+- Updated dependencies [c944ddc]
+  - @rainbow-me/rainbowkit@0.6.0
+  - @rainbow-me/rainbowkit-siwe-next-auth@0.1.3
+
+## 0.0.4
+
+### Patch Changes
+
+- Updated dependencies [52e2ad6]
+  - @rainbow-me/rainbowkit@0.5.3
+  - @rainbow-me/rainbowkit-siwe-next-auth@0.1.2
+
+## 0.0.3
+
+### Patch Changes
+
+- Updated dependencies [12912b3]
+- Updated dependencies [fcfc13d]
+- Updated dependencies [3f9013f]
+  - @rainbow-me/rainbowkit@0.5.2
+  - @rainbow-me/rainbowkit-siwe-next-auth@0.1.2
+
+## 0.0.2
+
+### Patch Changes
+
+- Updated dependencies [8060ccd]
+- Updated dependencies [4dfe834]
+- Updated dependencies [8060ccd]
+  - @rainbow-me/rainbowkit@0.5.1
+  - @rainbow-me/rainbowkit-siwe-next-auth@0.1.1
+
+## 0.0.1
+
+### Patch Changes
+
+- Updated dependencies [737a1d6]
+- Updated dependencies [737a1d6]
+- Updated dependencies [488c5a1]
+  - @rainbow-me/rainbowkit-siwe-next-auth@0.1.6
+  - @rainbow-me/rainbowkit@0.5.0
+
+
+
+================================================
+FILE: examples/with-next-siwe-next-auth/next-env.d.ts
+================================================
+/// <reference types="next" />
+/// <reference types="next/image-types/global" />
+
+// NOTE: This file should not be edited
+// see https://nextjs.org/docs/pages/api-reference/config/typescript for more information.
+
+
+
+================================================
+FILE: examples/with-next-siwe-next-auth/next.config.js
+================================================
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  reactStrictMode: true,
+  webpack: (config) => {
+    config.externals.push('pino-pretty', 'lokijs', 'encoding');
+    return config;
+  },
+};
+
+module.exports = nextConfig;
+
+
+
+================================================
+FILE: examples/with-next-siwe-next-auth/.env.local.example
+================================================
+NEXTAUTH_SECRET= # Mac/Linux: `openssl rand -hex 32` or go to https://generate-secret.now.sh/32
+NEXTAUTH_URL=http://localhost:3000
+
+NEXT_PUBLIC_ENABLE_TESTNETS=false
+
+
+
+================================================
+FILE: examples/with-next-siwe-next-auth/.gitignore
+================================================
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# local env files
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+
+
+
+================================================
+FILE: examples/with-next-siwe-next-auth/src/wagmi.ts
+================================================
+import { getDefaultConfig } from '@rainbow-me/rainbowkit';
+import { publicActions } from 'viem';
+import {
+  arbitrum,
+  base,
+  mainnet,
+  optimism,
+  polygon,
+  sepolia,
+} from 'wagmi/chains';
+
+export const config = getDefaultConfig({
+  appName: 'RainbowKit demo',
+  projectId: 'YOUR_PROJECT_ID',
+  chains: [
+    mainnet,
+    polygon,
+    optimism,
+    arbitrum,
+    base,
+    ...(process.env.NEXT_PUBLIC_ENABLE_TESTNETS === 'true' ? [sepolia] : []),
+  ],
+  ssr: true,
+});
+
+export const publicClient = config.getClient().extend(publicActions);
+
+
+
+================================================
+FILE: examples/with-next-siwe-next-auth/src/pages/_app.tsx
+================================================
+import '../styles/global.css';
+import '@rainbow-me/rainbowkit/styles.css';
+import type { AppProps } from 'next/app';
+import { SessionProvider } from 'next-auth/react';
+import type { Session } from 'next-auth';
+
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { WagmiProvider } from 'wagmi';
+import { RainbowKitProvider } from '@rainbow-me/rainbowkit';
+import {
+  RainbowKitSiweNextAuthProvider,
+  type GetSiweMessageOptions,
+} from '@rainbow-me/rainbowkit-siwe-next-auth';
+
+import { config } from '../wagmi';
+
+const getSiweMessageOptions: GetSiweMessageOptions = () => ({
+  statement: 'Sign in to the RainbowKit + SIWE example app',
+});
+
+const queryClient = new QueryClient();
+
+export default function App({
+  Component,
+  pageProps,
+}: AppProps<{
+  session: Session;
+}>) {
+  return (
+    <SessionProvider refetchInterval={0} session={pageProps.session}>
+      <WagmiProvider config={config}>
+        <QueryClientProvider client={queryClient}>
+          <RainbowKitSiweNextAuthProvider
+            getSiweMessageOptions={getSiweMessageOptions}
+          >
+            <RainbowKitProvider>
+              <Component {...pageProps} />
+            </RainbowKitProvider>
+          </RainbowKitSiweNextAuthProvider>
+        </QueryClientProvider>
+      </WagmiProvider>
+    </SessionProvider>
+  );
+}
+
+
+
+================================================
+FILE: examples/with-next-siwe-next-auth/src/pages/index.tsx
+================================================
+import { ConnectButton } from '@rainbow-me/rainbowkit';
+import type { GetServerSideProps, NextPage } from 'next';
+import { getServerSession } from 'next-auth';
+import { getAuthOptions } from './api/auth/[...nextauth]';
+
+export const getServerSideProps: GetServerSideProps = async ({ req, res }) => {
+  return {
+    props: {
+      session: await getServerSession(req, res, getAuthOptions(req)),
+    },
+  };
+};
+
+const Home: NextPage = () => {
+  return (
+    <div
+      style={{
+        display: 'flex',
+        justifyContent: 'flex-end',
+        padding: 12,
+      }}
+    >
+      <ConnectButton />
+    </div>
+  );
+};
+
+export default Home;
+
+
+
+================================================
+FILE: examples/with-next-siwe-next-auth/src/pages/api/auth/[...nextauth].ts
+================================================
+import type { IncomingMessage } from 'node:http';
+import type { NextApiRequest, NextApiResponse } from 'next';
+import NextAuth, { type NextAuthOptions } from 'next-auth';
+import CredentialsProvider from 'next-auth/providers/credentials';
+import { getCsrfToken } from 'next-auth/react';
+import {
+  type SiweMessage,
+  parseSiweMessage,
+  validateSiweMessage,
+} from 'viem/siwe';
+
+import { publicClient } from '../../../wagmi';
+
+export function getAuthOptions(req: IncomingMessage): NextAuthOptions {
+  const providers = [
+    CredentialsProvider({
+      async authorize(credentials: any) {
+        try {
+          const siweMessage = parseSiweMessage(
+            credentials?.message,
+          ) as SiweMessage;
+
+          if (
+            !validateSiweMessage({
+              address: siweMessage?.address,
+              message: siweMessage,
+            })
+          ) {
+            return null;
+          }
+
+          const nextAuthUrl =
+            process.env.NEXTAUTH_URL ||
+            (process.env.VERCEL_URL
+              ? `https://${process.env.VERCEL_URL}`
+              : null);
+          if (!nextAuthUrl) {
+            return null;
+          }
+
+          const nextAuthHost = new URL(nextAuthUrl).host;
+          if (siweMessage.domain !== nextAuthHost) {
+            return null;
+          }
+
+          if (
+            siweMessage.nonce !==
+            (await getCsrfToken({ req: { headers: req.headers } }))
+          ) {
+            return null;
+          }
+
+          const valid = await publicClient.verifyMessage({
+            address: siweMessage?.address,
+            message: credentials?.message,
+            signature: credentials?.signature,
+          });
+
+          if (!valid) {
+            return null;
+          }
+
+          return {
+            id: siweMessage.address,
+          };
+        } catch (e) {
+          console.error('Error authorizing user', e);
+          return null;
+        }
+      },
+      credentials: {
+        message: {
+          label: 'Message',
+          placeholder: '0x0',
+          type: 'text',
+        },
+        signature: {
+          label: 'Signature',
+          placeholder: '0x0',
+          type: 'text',
+        },
+      },
+      name: 'Ethereum',
+    }),
+  ];
+
+  return {
+    callbacks: {
+      async session({ session, token }) {
+        session.address = token.sub;
+        session.user = {
+          name: token.sub,
+        };
+        return session;
+      },
+    },
+    // https://next-auth.js.org/configuration/providers/oauth
+    providers,
+    secret: process.env.NEXTAUTH_SECRET,
+    session: {
+      strategy: 'jwt',
+    },
+  };
+}
+
+// For more information on each option (and a full list of options) go to
+// https://next-auth.js.org/configuration/options
+export default async function auth(req: NextApiRequest, res: NextApiResponse) {
+  const authOptions = getAuthOptions(req);
+
+  if (!Array.isArray(req.query.nextauth)) {
+    res.status(400).send('Bad request');
+    return;
+  }
+
+  const isDefaultSigninPage =
+    req.method === 'GET' &&
+    req.query.nextauth.find((value) => value === 'signin');
+
+  // Hide Sign-In with Ethereum from default sign page
+  if (isDefaultSigninPage) {
+    authOptions.providers.pop();
+  }
+
+  return await NextAuth(req, res, authOptions);
+}
+
+
+
+================================================
+FILE: examples/with-next-siwe-next-auth/src/styles/global.css
+================================================
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+
+================================================
+FILE: examples/with-next-siwe-next-auth/types/next-auth.d.ts
+================================================
+import type { DefaultSession } from 'next-auth';
+
+declare module 'next-auth' {
+  /**
+   * Returned by `useSession`, `getSession` and received as a prop on the `SessionProvider` React Context
+   */
+  interface Session {
+    /** The user's public Ethereum address. */
+    address?: string;
+    user: DefaultSession['user'];
+  }
+}
+
+
+
+
