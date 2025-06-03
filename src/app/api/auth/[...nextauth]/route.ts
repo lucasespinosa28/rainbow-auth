@@ -32,11 +32,12 @@ function getAuthOptions(): NextAuthOptions {
             return null;
           }
 
-          const nextAuthUrl =
-            process.env.NEXTAUTH_URL ||
-            (process.env.VERCEL_URL
-              ? `https://${process.env.VERCEL_URL}`
-              : null);
+          let nextAuthUrl = process.env.NEXTAUTH_URL;
+          if (!nextAuthUrl && process.env.VERCEL_URL) {
+            nextAuthUrl = process.env.VERCEL_URL.startsWith('http')
+              ? process.env.VERCEL_URL
+              : `https://${process.env.VERCEL_URL}`;
+          }
           if (!nextAuthUrl) {
             return null;
           }
