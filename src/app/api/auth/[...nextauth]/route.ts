@@ -8,13 +8,19 @@ import {
 import { verifyMessage } from 'viem/actions';
 import { publicClient } from '@/components/WalletProvider';
 
-export function getAuthOptions(): NextAuthOptions {
+function getAuthOptions(): NextAuthOptions {
   const providers = [
     CredentialsProvider({
-      async authorize(credentials: any) {
+      async authorize(
+        credentials: Record<'message' | 'signature', string> | undefined
+      ) {
         try {
+          if (!credentials?.message || !credentials?.signature) {
+            return null;
+          }
+
           const siweMessage = parseSiweMessage(
-            credentials?.message,
+            credentials.message,
           ) as SiweMessage;
 
           if (
@@ -40,10 +46,14 @@ export function getAuthOptions(): NextAuthOptions {
             return null;
           }
 
+          // Ensure types for verifyMessage
+          const address = siweMessage?.address as `0x${string}`;
+          const signature = credentials.signature as `0x${string}`;
+
           const valid = await verifyMessage(publicClient, {
-            address: siweMessage?.address,
-            message: credentials?.message,
-            signature: credentials?.signature,
+            address,
+            message: credentials.message,
+            signature,
           });
 
           if (!valid) {
@@ -77,7 +87,7 @@ export function getAuthOptions(): NextAuthOptions {
   return {
     callbacks: {
       async session({ session, token }) {
-        session.address = token.sub;
+        (session as typeof session & { address?: string }).address = token.sub;
         session.user = {
           name: token.sub,
         };
